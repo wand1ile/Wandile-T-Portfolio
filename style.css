@@ -91,7 +91,7 @@ body {
 }
 
 /* =========================
-   SECTIONS (ABOUT / PORTFOLIO / CONTACT)
+   SECTIONS
 ========================= */
 
 .section {
@@ -110,13 +110,103 @@ body {
   font-size: 18px;
   line-height: 1.9;
   opacity: 0.92;
-  margin-bottom: 18px; /* space between paragraphs */
+  margin-bottom: 18px;
   max-width: 900px;
 }
 
-/* Optional: subtle divider line between sections */
-.section:not(:first-of-type) {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+/* =========================
+   PROJECT TILE
+========================= */
+
+.projects-grid {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.project-card {
+  width: 320px;
+  padding: 30px;
+  background: #151515;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   MODAL POPUP
+========================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #111;
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 520px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #1e90ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background 0.25s ease;
+}
+
+.modal-btn:hover {
+  background: #1876d1;
 }
 
 /* =========================
@@ -158,5 +248,10 @@ body {
 
   .section p {
     font-size: 16px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 360px;
   }
 }

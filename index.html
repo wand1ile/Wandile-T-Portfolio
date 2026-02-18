@@ -50,15 +50,63 @@
     <p>I’m especially motivated by the idea of creating technology that solves real problems, scales effectively, and reflects thoughtful engineering.</p>
   </section>
 
+  <!-- PORTFOLIO -->
   <section class="section" id="portfolio">
     <h2>Portfolio</h2>
-    <p>Add your projects here.</p>
+
+    <div class="projects-grid">
+      <!-- Project Tile -->
+      <div class="project-card" onclick="openModal()">
+        <h3>Student Funding Management System</h3>
+        <p>Click to view project</p>
+      </div>
+    </div>
   </section>
 
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <h2>Student Funding Management System</h2>
+
+      <p>
+        This application showcases my ability to design and build clean,
+        functional digital experiences. It focuses on thoughtful structure,
+        usability, and real-world problem solving.
+      </p>
+
+      <!-- Replace with your real YouTube link -->
+      <a href="https://www.youtube.com/watch?v=zpRzzTg62no" target="_blank" class="modal-btn">
+        See More
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <h2>Contact</h2>
     <p>Add your contact info here.</p>
   </section>
+
+  <!-- JS (Modal) -->
+  <script>
+    function openModal() {
+      document.getElementById("projectModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("projectModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside content
+    window.onclick = function (event) {
+      const modal = document.getElementById("projectModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 
 </body>
 </html>

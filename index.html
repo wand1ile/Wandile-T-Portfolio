@@ -37,21 +37,23 @@
 
   <!-- ABOUT -->
   <section class="section" id="about">
+    <span class="eyebrow">Get to know me</span>
     <h2>About Me</h2>
 
-    <p>Hi, I’m Wandile Tshabalala, a Final Year Computer Science student with a deep curiosity for how technology works and how ideas become real world digital experiences.</p>
+    <p>Hi, I'm Wandile Tshabalala, a Final Year Computer Science student with a deep curiosity for how technology works and how ideas become real world digital experiences.</p>
 
-    <p>Academically, I’ve developed a strong foundation through coursework in algorithms, data structures, discrete computational structures, computer organization, databases, networks, and mobile computing. I enjoy understanding systems at both a theoretical and practical level, from how algorithms behave to how applications feel in the hands of users.</p>
+    <p>Academically, I've developed a strong foundation through coursework in algorithms, data structures, discrete computational structures, computer organization, databases, networks, and mobile computing. I enjoy understanding systems at both a theoretical and practical level, from how algorithms behave to how applications feel in the hands of users.</p>
 
-    <p>I value growth, clarity and mastery. I like breaking down complex ideas into simple, understandable components, a mindset that helps both in learning and in building. I’m constantly exploring ways to improve my technical skills, deepen my understanding, and refine how I think about design, systems, and user experience.</p>
+    <p>I value growth, clarity and mastery. I like breaking down complex ideas into simple, understandable components, a mindset that helps both in learning and in building. I'm constantly exploring ways to improve my technical skills, deepen my understanding, and refine how I think about design, systems, and user experience.</p>
 
-    <p>My long term goal is to become a highly skilled individual in tech, working on impactful, high quality products at great companies. I’m driven by a desire for both technical excellence and meaningful contribution — building solutions that are not only efficient and robust, but genuinely useful to people.</p>
+    <p>My long term goal is to become a highly skilled individual in tech, working on impactful, high quality products at great companies. I'm driven by a desire for both technical excellence and meaningful contribution — building solutions that are not only efficient and robust, but genuinely useful to people.</p>
 
-    <p>I’m especially motivated by the idea of creating technology that solves real problems, scales effectively, and reflects thoughtful engineering.</p>
+    <p>I'm especially motivated by the idea of creating technology that solves real problems, scales effectively, and reflects thoughtful engineering.</p>
   </section>
 
   <!-- PORTFOLIO -->
   <section class="section" id="portfolio">
+    <span class="eyebrow">Selected work</span>
     <h2>Portfolio</h2>
 
     <div class="projects-grid">
@@ -85,8 +87,39 @@
 
   <!-- CONTACT -->
   <section class="section" id="contact">
+    <span class="eyebrow">Let's talk</span>
     <h2>Contact</h2>
-    <p>Add your contact info here.</p>
+    <p class="section-intro">Have a project in mind or want to connect? Fill in the form below and it will land straight in my inbox.</p>
+
+    <form class="contact-form" action="https://formsubmit.co/wtshabalala18@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from your portfolio site" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="firstname">Name</label>
+          <input type="text" id="firstname" name="Name" placeholder="First name" required />
+        </div>
+
+        <div class="form-field">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" name="Surname" placeholder="Last name" required />
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" placeholder="your.email@example.com" required />
+      </div>
+
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" placeholder="Write your message here" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
   </section>
 
   <!-- JS (Modal) -->

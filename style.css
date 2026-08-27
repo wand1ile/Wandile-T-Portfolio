@@ -42,6 +42,9 @@ body {
   padding: 25px 60px;
   background: #0f0f0f;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-list {
@@ -50,6 +53,29 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 60px;
+}
+
+.linkedin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  flex-shrink: 0;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.linkedin-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.linkedin-btn:hover {
+  background: #1876d1;
+  transform: translateY(-2px);
 }
 
 .nav-link {
@@ -160,6 +186,89 @@ body {
 }
 
 /* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+  margin-top: var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.skill-group h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.skill-name {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.skill-meter {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.skill-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.skill-meter[data-level="1"] .skill-dot:nth-child(-n+1),
+.skill-meter[data-level="2"] .skill-dot:nth-child(-n+2),
+.skill-meter[data-level="3"] .skill-dot:nth-child(-n+3),
+.skill-meter[data-level="4"] .skill-dot:nth-child(-n+4) {
+  background: var(--accent);
+}
+
+.skill-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skill-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* =========================
    PROJECT TILE
 ========================= */
 
@@ -251,13 +360,23 @@ body {
   opacity: 1;
 }
 
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
 .modal-btn {
   display: inline-block;
+  width: 100%;
+  max-width: 280px;
   padding: 14px 32px;
   background: var(--accent);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  text-align: center;
   border-radius: 10px;
   transition: background 0.25s ease;
 }
@@ -360,6 +479,18 @@ body {
 @media (max-width: 900px) {
   .navbar {
     padding: 20px 25px;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .linkedin-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .linkedin-btn svg {
+    width: 20px;
+    height: 20px;
   }
 
   .nav-list {
@@ -398,6 +529,15 @@ body {
   .project-card {
     width: 100%;
     max-width: 360px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .skill-legend {
+    gap: var(--space-md);
   }
 
   .contact-form {
